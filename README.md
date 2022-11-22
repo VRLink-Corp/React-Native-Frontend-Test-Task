@@ -14,6 +14,28 @@ The Products tab will display VRLink products. Each product should show the phot
 
 Both tabs should have their icons changed to represent what the screen is showing.
 
+## GraphQL
+
+### Endpoint
+
+The GraphQL endpoint is found at https://vrlink-test-tasks.uc.r.appspot.com
+
+### Schema
+
+You can get the schema by using [introspection](https://graphql.org/learn/introspection)
+
+You may also want to use [graphqurl](https://github.com/hasura/graphqurl) CLI tool
+
+`gq https://vrlink-test-tasks.uc.r.appspot.com --introspect > schema.graphql`
+
+Or if you want it in JSON
+
+`gq https://vrlink-test-tasks.uc.r.appspot.com --introspect --format json > schema.json`
+
+### Test some queries
+
+You can use a tool like [hoppscotch](https://hoppscotch.io/graphql) to make queries to the live API endpoint
+
 ## Available scripts
 
 In the project directory, you can run:

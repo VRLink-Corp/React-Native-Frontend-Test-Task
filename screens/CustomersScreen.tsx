@@ -1,10 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import useCustomers from '../hooks/useCustomers';
 
 export default function CustomersScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+  const { loading, error, customers } = useCustomers();
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Customers</Text>

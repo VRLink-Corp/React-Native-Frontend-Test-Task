@@ -2,8 +2,11 @@ import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import useProducts from '../hooks/useProducts';
 
 export default function ProductsScreen() {
+  const { loading, error, products } = useProducts();
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Products</Text>
