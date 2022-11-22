@@ -4,6 +4,8 @@ import { GET_CUSTOMERS } from '../gql/Query';
 
 type Customer = {
   name: string;
+  description: string;
+  logo: string;
   id: string;
 };
 

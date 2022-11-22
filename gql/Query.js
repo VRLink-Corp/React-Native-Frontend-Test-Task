@@ -4,9 +4,13 @@ export const GET_PRODUCTS = gql`
   query Products {
     products {
       id
+      styleCode
+      colorCode
       styleName
       colorName
       image
+      category
+      description
     }
   }
 `;
@@ -16,6 +20,8 @@ export const GET_CUSTOMERS = gql`
     customers {
       id
       name
+      description
+      logo
     }
   }
 `;
